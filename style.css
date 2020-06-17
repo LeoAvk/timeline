@@ -1,0 +1,128 @@
+:root{
+   --red: rgb(230, 48, 67);
+   --orange: rgb(246, 77, 42);
+   --light-red:rgb(255, 75, 62);
+   --yellow:rgb(255, 178, 15);
+   --dark-yellow:rgb(255, 148, 34);
+   --light-orange:rgb(255, 110, 43);
+}
+body{
+    background: #76ffb8;
+    counter-reset: section 2011;
+}
+.orange{
+    background: var(--orange)!important;
+}
+.data-orange{
+    color: var(--orange)!important;
+}
+
+.light-red{
+    background: var(--light-red)!important;
+}
+.data-light-red{
+    color: var(--light-red)!important;
+}
+.yellow{
+    background: var(--yellow)!important;
+}
+.data-yellow{
+    color: var(--yellow)!important;
+}
+.dark-yellow{
+    background: var(--dark-yellow)!important;
+}
+.data-dark-yellow{
+    color: var(--dark-yellow)!important;
+}
+.light-orange{
+    background: var(--light-orange)!important;
+}
+.data-light-orange{
+    color: var(--light-orange)!important;
+}
+.timeline{
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.block{
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 3px;
+    background-color: var(--red);
+    position: relative;
+}
+.event{
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+.line{
+    position: absolute;
+    bottom: -39px;
+    min-height: 130px;
+    width: 2px;
+    background: black;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+
+}
+.up{
+    background-color: rgb(230, 48, 67);
+    border: 1px solid black;
+    position: absolute;
+    bottom: 120px;
+    border-radius: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+.up-img{
+    filter: brightness(0) invert(1);
+}
+.data{
+    position: absolute;
+    top: 50px;
+    color: rgb(230, 48, 67);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    bottom: 10px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+h1::before{
+    counter-increment: section;
+    content: counter(section);
+}
+.block:nth-child(even) .line {
+    bottom: -180px;
+}
+.block:nth-child(even) .up{
+    bottom: -218px;
+}
+.block:nth-child(even) .data{
+    top: -25px;
+}
